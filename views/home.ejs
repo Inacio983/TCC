@@ -1,0 +1,32 @@
+<div id="wrapper">
+
+    <div class="info">
+        <h1>As melhores receitas</h1>
+        <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
+    </div>
+
+    <img src="img/bat.png" alt="batedeira">
+
+</div>
+
+<div class="mais_acessadas">
+    <h1 id="title">Mais acessadas</h1>
+</div>
+
+<section class="recipes">
+
+    <% receitas.forEach(receita => { %> 
+    <a href="/receita/<%- receita.id_receita %>/1">
+    <div class="card">
+        <div class="recipe_image-container">
+           <img src="<%- receita.imagem %>" alt="burguer">
+        </div>
+        <div class="recipe_info">
+            <p class="nome"><%- receita.nome %></p>
+        </div>
+    </div>
+    </a>
+    <% }); %> 
+
+    
+</section>
