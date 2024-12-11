@@ -6,11 +6,11 @@ async function connect(){
     const mysql = require("mysql2/promise");
     
     const connection = await mysql.createConnection({
-      host: process.env.HOST,
-      port:process.env.PORT,
-      user: process.env.USER,
-      password : process.env.PASSWORD,
-      database: process.env.DATABASE
+      host: 'db4free.net',
+      port: 3306,
+      user: 'curso132',
+      password: 'senha123',
+      database: 'mvc123'
     });
   console.log("Conectou no MySQL!");
   global.connection = connection;
