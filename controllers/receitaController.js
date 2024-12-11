@@ -39,10 +39,12 @@ async function getReceita(req, res) {
 
 			let ml = await Medida.buscarMedida(i_separa[2]);
 			ml = ml[0].mililitros*i_separa[1];
+			ml = ml.toFixed(2);
 			i_separa.push(ml);
 			
 			let peso = await Peso.buscarPeso(i_separa[3]);
 			peso = peso[0].gramas*ml;
+			peso = peso.toFixed(2);
 			i_separa.push(peso);
 
 			let espec_n = await Especial.buscarEspecialNome(i_separa[3]);
