@@ -147,8 +147,6 @@ async function getReceita(req, res) {
 
     if(receita.length > 0){
 		receita=receita[0];
-		console.log(porcao);
-
 		res.render('receita', { receita, extra, medindo, porcao });
 	}else{
 		res.render('404');
